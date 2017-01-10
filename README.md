@@ -51,3 +51,11 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+
+
+$ ember install emberfire - adds emberfire to package.json, firebase to bower.json, and create a new application adapter:
+$ touch rentals.json - in the root directory, add the seed data(databases are always plural)
+import database.json into the firebase database
+access rules in the firebase console and add permission to read and write
+update the model hook in index.js(the route handler) to use the firebase database
+$ ember g component rental-tile
