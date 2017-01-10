@@ -3,10 +3,12 @@
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
 <ul>
-  {{#each model as |rental|}}
-  <li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}</li>
+  {{#each model as |rental-from-template|}}
+    {{rental-tile rental-in-component=rental-from-template destroyRental="destroyRental"}}
   {{/each}}
 </ul>
+
+{{new-rental saveRental2="saveRental3"}}
 
 {{#link-to 'about'}}About{{/link-to}}&nbsp;&nbsp;&nbsp;&nbsp;
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}

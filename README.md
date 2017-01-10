@@ -53,9 +53,15 @@ Specify what it takes to deploy your app.
 
 
 
-$ ember install emberfire - adds emberfire to package.json, firebase to bower.json, and create a new application adapter:
-$ touch rentals.json - in the root directory, add the seed data(databases are always plural)
-import database.json into the firebase database
-access rules in the firebase console and add permission to read and write
-update the model hook in index.js(the route handler) to use the firebase database
-$ ember g component rental-tile
+* $ ember install emberfire - adds emberfire to package.json, firebase to bower.json, and create a new application adapter:
+* $ touch rentals.json - in the root directory, add the seed data(databases are always plural)
+* import database.json into the firebase database
+* access rules in the firebase console and add permission to read and write
+* update the model hook in index.js(the route handler) to use the firebase database
+* $ ember g component rental-tile - generate a new component
+* change index.hbs each loop to use the rental-tile component
+* add code to display rental information in rental-tile.hbs
+* add code to display or hide images in rental-tile.hbs, add the required code to make it work into rental-tile.js
+* add button to destroy rental to dental-tile.hbs, which tells dental-tile.js to send an action up to the template(index.hbs)
+* pass the delete/destroy action along from the template(index.hbs) to the route handler(index.js) (add destroyRental="destroyRental" to the component link in index.hbs)
+* destroy the record in index.js
