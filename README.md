@@ -65,3 +65,4 @@ Specify what it takes to deploy your app.
 * add button to destroy rental to dental-tile.hbs, which tells dental-tile.js to send an action up to the template(index.hbs)
 * pass the delete/destroy action along from the template(index.hbs) to the route handler(index.js) (add destroyRental="destroyRental" to the component link in index.hbs)
 * destroy the record in index.js
+* $ ember g component new-rental
