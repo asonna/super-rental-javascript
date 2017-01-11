@@ -66,3 +66,10 @@ Specify what it takes to deploy your app.
 * pass the delete/destroy action along from the template(index.hbs) to the route handler(index.js) (add destroyRental="destroyRental" to the component link in index.hbs)
 * destroy the record in index.js
 * $ ember g component new-rental
+
+* $ ember g component update-rental
+  - update rental-tide.hbs
+  - load the code in update-rental.hbs to display form content
+  - load code in the update-rental.js to bound the action update to the "Save" button.
+  update the rental-tile.js file to allow the update change to be passed on
+  -

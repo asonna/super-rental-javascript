@@ -5,5 +5,8 @@
   {{else}}
     <button {{action 'imageShow'}}>Show image</button>
   {{/if}}
+  <!-- first part of equal has to match what is inside update-rental.hbs
+    and second part of equal has to match the item above on line 2-->
+  {{update-rental rental-in-component=rental-in-component update="update"}}
   <button {{action 'delete' rental-in-component}}>Delete Rental</button>
 </li>
