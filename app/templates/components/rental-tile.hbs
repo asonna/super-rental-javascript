@@ -1,12 +1,8 @@
 <li>
-  {{rental-in-component.owner}}'s {{rental-in-component.type}} in {{rental-in-component.city}}
+  {{#link-to 'rental' rental-in-component.id}}{{rental-in-component.owner}}'s {{rental-in-component.type}} in {{rental-in-component.city}}{{/link-to}}
   {{#if isImageShowing }}
     <p><img src={{rental-in-component.image}} alt={{rental-in-component.type}} {{action 'imageHide'}}></p>
   {{else}}
     <button {{action 'imageShow'}}>Show image</button>
   {{/if}}
-  <!-- first part of equal has to match what is inside update-rental.hbs
-    and second part of equal has to match the item above on line 2-->
-  {{update-rental rental-in-component=rental-in-component update="update"}}
-  <button {{action 'delete' rental-in-component}}>Delete Rental</button>
 </li>
